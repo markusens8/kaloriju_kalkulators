@@ -16,23 +16,28 @@ h1 {
   font-size: 3rem;
   color: var(--primary-color);
   text-align: center;
-  margin-bottom: 0.025rem;
+  margin-bottom: 0.01rem;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-div {
-  width: 35%;
+.pirma-rinda {
+  width: 40%;
+  border: dotted black 3px;
   text-align: center;
-  margin-left: 2.5%;
 }
 
+/*
+.otra-rinda {
+
+}
+*/
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: var(--primary-color);
-  margin-left: 5%;
 }
