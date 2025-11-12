@@ -2,9 +2,16 @@
   --primary-color: green;
 }
 
+@font-face {
+  font-family: 'Continuum';
+  src: 
+    local('Continuum'),
+    url('contm.ttf') format(truetype);
+}
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Continuum;
 }
 
 header {
@@ -31,11 +38,14 @@ main {
   text-align: center;
 }
 
-/*
-.otra-rinda {
 
+.otra-rinda {
+  width: 20%;
+  border: dotted black 3px;
+  text-align: center;
+  margin-top: 20%;
 }
-*/
+
 
 h2 {
   font-size: 2rem;
