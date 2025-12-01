@@ -1,1 +1,7 @@
-console.log('Labdien, pasaule!');
+function izgutDatus() {
+  
+}
+
+function aprekinat() {
+
+}
