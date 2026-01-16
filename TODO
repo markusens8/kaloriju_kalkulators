@@ -1,13 +1,3 @@
-1. Izveidot personas datu ievades sadaļu 
-  | statiska versija DONE
-  | interaktiva versija
-  | stilizeta versija
-  EXTRA: Ja ir laiks, katrai informācijai izveidot savu interaktīvu sadaļu
-
-2. Izveidot kaloriju sadaļu
-  | statiska versija 
-  | interaktiva versija
-  | stilizeta versija
-
-3. Uztaisit nedinamisku majas lapu, pec tam  SPA stilā
-
+1. Pielikt tekstu pie ievades laukiem
+2. Ar JS nolasit datus un ielikt tos iekš map
+3. Parādīt rezultātus - cik kalorijas vajag ēst priekš mērķa

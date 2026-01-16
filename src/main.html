@@ -13,58 +13,64 @@
     
 
     <main>
-      <label>
-        <h2>dzimums</h2>
-        <input type='radio' name='dzimums' />
-        <input type='radio' name='dzimums' />
-      </label>
+      <form id='dati'>
+        <label>
+          dzimums
+          <input type='radio' name='dzimums' value='sieviete' />
+          <input type='radio' name='dzimums' value='virietis'/>
+        </label>
 
-      <label>
-        <h2>aktivitātes līmenis</h2>
-        <input type='radio' name='aktivitates-limenis' />
-        <input type='radio' name='aktivitates-limenis' />
-        <input type='radio' name='aktivitates-limenis' />
-      </label>
+        <label>
+          aktivitātes līmenis
+          <input type='radio' name='aktivitates-limenis' value='maz'/>
+          <input type='radio' name='aktivitates-limenis' value='videji'/>
+          <input type='radio' name='aktivitates-limenis' value='daudz'/>
+        </label>
 
-      <label>
-        <h2>dietas merki</h2>
-        <input type='radio' name='dietas-merki' />
-        <input type='radio' name='dietas-merki' />
-        <input type='radio' name='dietas-merki' />
-      </label>
+        <label>
+          dietas merki
+          <input type='radio' name='dietas-merki' value='zaudet'/>
+          <input type='radio' name='dietas-merki' value='saglabat'/>
+          <input type='radio' name='dietas-merki' value='iegut'/>
+        </label>
 
-      <label>
-        <h2>vecums</h2>
-        <input type='number' />
-      </label>
+        <label>
+          vecums
+          <input type='number' name='vecums' min='0' max='120'/>
+        </label>
 
-      <label>
-        <h2>garums</h2>
-        <input type='number' />
-      </label>    
+        <label>
+          garums
+          <input type='number' name='garums' min='0' max='300'/>
+        </label>    
 
-      <label>
-        <h2>svars</h2>
-        <input type='number' />
-      </label>
+        <label>
+          svars
+          <input type='number' name='svars' min='0' max='300'/>
+        </label>
+      </form>
+      <button onclick='aprekinat()'>glii</button>
 
-      <button onclick="aprekinat()">iesniegt</button>
+      <br></br>
+      <h2>Rezultāts:</h2>
+      <h3>Mērķa kalorijas: </h3>
+
+      <h3>Patērētās kalorijas:</h3>
+      
+      <h3>Brokastis</h3>
+      <p>ogļhidrāti:</p>
+      <p>tauki</p>
+      <p>olbaltumvielas</p>
+
+      <h3>Pusdienas</h3>
+      <p>ogļhidrāti:</p>
+      <p>tauki</p>
+      <p>olbaltumvielas</p>
+
+      <h3>Vakariņas</h3>
+      <p>ogļhidrāti:</p>
+      <p>tauki</p>
+      <p>olbaltumvielas</p>
     </main>
   </body>
 </html>
-
-<!--
-      <div>
-        <label>
-          <h2>svars</h2>
-          <input type='number' />
-        </label>
-      </div>
-
-      <div>
-        <label>
-          <h2>garums</h2>
-          <input type='number' />
-        </label>
-      </div>
--->
