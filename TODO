@@ -1,3 +1,8 @@
 1. Pielikt tekstu pie ievades laukiem
-2. Ar JS nolasit datus un ielikt tos iekš map
+2. Ar JS nolasit datus un ielikt tos iekš map | DAN
 3. Parādīt rezultātus - cik kalorijas vajag ēst priekš mērķa
+
+MVP:
+- izvada cik kalorijas vajag dienā
+- BMR
+- makrovielas katrai ēdienreizei | sāksim ar to, ka katra ēdienreize ir vienāda

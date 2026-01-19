@@ -1,53 +1,8 @@
-:root {
-  --primary-color: green;
-}
-
-@font-face {
-  font-family: 'Continuum';
-  src: 
-    local('Continuum'),
-    url('contm.ttf') format(truetype);
-}
-
 body {
-  margin: 0;
-  font-family: Continuum;
+  background-color: rgb(55, 168, 55);
+  color: rgb(10, 99, 10);
 }
 
-header {
-  border-bottom: solid 3px var(--primary-color);
-  margin-bottom: 2.5%;
-}
-
-h1 {
-  font-size: 3rem;
-  color: var(--primary-color);
-  text-align: center;
-  margin-bottom: 0.01rem;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.pirma-rinda {
-  width: 40%;
-  border: dotted black 3px;
-  text-align: center;
-}
-
-
-.otra-rinda {
-  width: 20%;
-  border: dotted black 3px;
-  text-align: center;
-  margin-top: 20%;
-}
-
-
-h2 {
-  font-size: 2rem;
-  color: var(--primary-color);
+label {
+  display: block;
 }
