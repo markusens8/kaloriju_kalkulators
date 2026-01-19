@@ -1,9 +1,9 @@
 function ieladetSadalu(sadala) {
-  document.getElementById("app").body.innerHTML = '';
+  let app = document.getElementById('app');
+  app.innerHTML = '';
 
-  let ievade = document.getElementById(sadala);
-  let klons = ievade.content.cloneNode(true);
-  document.body.appendChild(klons);
+  let jaunaSadala = document.getElementById(sadala);
+  app.appendChild(jaunaSadala.content.cloneNode(true));
 }
 
 function aprekinatBMR() {
@@ -15,7 +15,6 @@ function aprekinatBMR() {
 }
 
 function paraditRezultatus() {
-  let bmr = aprekinatBMR;
   ieladetSadalu('rezultats')
 }
 
