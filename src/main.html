@@ -56,7 +56,28 @@
     </template>
 
     <template id='rezultats'>
-      <h2>Rezultāts: </h2>
+      <h2>Bazes kalorijas:</h2>
+      <p class='kalorijas' id='bazes-kalorijas'></p>
+
+      <h2>Mērķa kalorijas:</h2>
+      <p class='kalorijas' id='merka-kalorijas'></p>
+
+      <h2>Maltite</h2>
+      <table>
+        <tr>
+          <th>kcal</th>
+          <th>oglhidrati</th>
+          <th>tauki</th>
+          <th>olbaltumvielas</th>
+        </tr>
+        <tr>
+          <td id='kcal'></td>
+          <td id='carb'></td>
+          <td id='fat'></td>
+          <td id='protein'></td>
+        </tr>
+      </table>
+
       <button onclick="ieladetSadalu('ievade')">atpakal</button>
     </template>
   </body>

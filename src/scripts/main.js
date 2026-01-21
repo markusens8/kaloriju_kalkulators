@@ -16,19 +16,23 @@ function aprekinatKalorijas() {
   
   let bmr = 10*dati.svars + 6.25*dati.garums - 5*dati.vecums + DZIMUMI[dati.dzimums];
 
-  console.log(dati);
-  console.log(dati['aktivitates-limenis']);
-  console.log("bmr: " + bmr);
-
   let baseCalories = bmr * AKTIVITASU_LIMENI[dati["aktivitates-limenis"]];
   let goalCalories = baseCalories + SVARA_MERKI[dati["dietas-merki"]];
   return [parseInt(baseCalories), parseInt(goalCalories)];
 }
 
 function paraditRezultatus() {
-  console.log(aprekinatKalorijas());
-  //const [baseCalories, goalCalories] = aprekinatKalorijas();
-  // ieladetSadalu('rezultats')
+  const [baseCalories, goalCalories] = aprekinatKalorijas();
+  const mealCalories = goalCalories / 3;
+  ieladetSadalu('rezultats')
+
+  document.getElementById('bazes-kalorijas').innerHTML += baseCalories;
+  document.getElementById('merka-kalorijas').innerHTML += goalCalories;
+
+  document.getElementById('kcal').innerHTML = parseInt(mealCalories);
+  document.getElementById('carb').innerHTML = parseInt(mealCalories * 0.33 / 4);
+  document.getElementById('fat').innerHTML = parseInt(mealCalories * 0.33 / 9);
+  document.getElementById('protein').innerHTML = parseInt(mealCalories * 0.33 / 4);
 }
 
 
