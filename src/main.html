@@ -16,7 +16,7 @@
         <h1>Personas Dati</h1>
       </header>
   
-      <form id='dati' onsubmit='paraditRezultatus(); return false'>
+      <form id="dati" onsubmit="paraditRezultatus(); return false;">
         <label>
           dzimums
           <input type='radio' name='dzimums' value='sieviete' required/>
@@ -25,9 +25,9 @@
 
         <label>
           aktivitātes līmenis
-          <input type='radio' name='aktivitates-limenis' value='maz' required/>
-          <input type='radio' name='aktivitates-limenis' value='videji'/>
-          <input type='radio' name='aktivitates-limenis' value='daudz'/>
+          <input type='radio' name='aktivitates-limenis' value='mazs' required/>
+          <input type='radio' name='aktivitates-limenis' value='videjs'/>
+          <input type='radio' name='aktivitates-limenis' value='liels'/>
         </label>
 
         <label>
@@ -57,7 +57,7 @@
 
     <template id='rezultats'>
       <h2>Rezultāts: </h2>
-      <button>atpakal</button>
+      <button onclick="ieladetSadalu('ievade')">atpakal</button>
     </template>
   </body>
 </html>

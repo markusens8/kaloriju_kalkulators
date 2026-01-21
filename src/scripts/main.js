@@ -6,16 +6,29 @@ function ieladetSadalu(sadala) {
   app.appendChild(jaunaSadala.content.cloneNode(true));
 }
 
-function aprekinatBMR() {
-  const dati = Object.fromEntries(new FormData('dati'));
+function aprekinatKalorijas() {
+  const DZIMUMI = {'virietis':5, 'sieviete':-161};
+  const AKTIVITASU_LIMENI = {'mazs':1.20, 'videjs':1.375, 'liels':1.465};
+  const SVARA_MERKI = {'zaudet':-300, 'saglabat':0, 'iegut':300};
 
-  let bmr = 10*dati.svars + 6.25*dati.garums - 5*dati.vecums
-  bmr += (dati.vecums == 'virietis' ? 5 : -161);
-  return bmr;
+  const forma = document.querySelector("form"); 
+  const dati = Object.fromEntries(new FormData(forma));;
+  
+  let bmr = 10*dati.svars + 6.25*dati.garums - 5*dati.vecums + DZIMUMI[dati.dzimums];
+
+  console.log(dati);
+  console.log(dati['aktivitates-limenis']);
+  console.log("bmr: " + bmr);
+
+  let baseCalories = bmr * AKTIVITASU_LIMENI[dati["aktivitates-limenis"]];
+  let goalCalories = baseCalories + SVARA_MERKI[dati["dietas-merki"]];
+  return [parseInt(baseCalories), parseInt(goalCalories)];
 }
 
 function paraditRezultatus() {
-  ieladetSadalu('rezultats')
+  console.log(aprekinatKalorijas());
+  //const [baseCalories, goalCalories] = aprekinatKalorijas();
+  // ieladetSadalu('rezultats')
 }
 
 
