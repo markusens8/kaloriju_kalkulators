@@ -21,18 +21,33 @@ function aprekinatKalorijas() {
   return [parseInt(baseCalories), parseInt(goalCalories)];
 }
 
+// Rezultātu ekrānā atjaunina makorvielu daudzumus
+function atjauninatMakrovielas(ratios) {
+  const mealCalories = parseInt(document.getElementById('merka-kalorijas').innerHTML / 3);
+  document.getElementById('carb').innerHTML = parseInt(mealCalories * ratios['carb'] / 4);
+  document.getElementById('fat').innerHTML = parseInt(mealCalories * ratios['fat'] / 9);
+  document.getElementById('protein').innerHTML = parseInt(mealCalories * ratios['protein'] / 4);
+}
+
+// Kad tiek ievaditi personas dati, tad palaižas ši funkcija un tiek izveidots rezultatu ekrans 
 function paraditRezultatus() {
   const [baseCalories, goalCalories] = aprekinatKalorijas();
-  const mealCalories = goalCalories / 3;
-  ieladetSadalu('rezultats')
 
+  ieladetSadalu('rezultats')
   document.getElementById('bazes-kalorijas').innerHTML += baseCalories;
   document.getElementById('merka-kalorijas').innerHTML += goalCalories;
+  atjauninatMakrovielas({'carb': 0.33, 'fat': 0.33, 'protein': 0.34});
+}
 
-  document.getElementById('kcal').innerHTML = parseInt(mealCalories);
-  document.getElementById('carb').innerHTML = parseInt(mealCalories * 0.33 / 4);
-  document.getElementById('fat').innerHTML = parseInt(mealCalories * 0.33 / 9);
-  document.getElementById('protein').innerHTML = parseInt(mealCalories * 0.33 / 4);
+// Parbauda vai makrovielu % daudzumi neparsniedz 100, pec tam atjaunina
+function parbauditProcentus() {
+  const precentInputs = document.getElementsByClassName('precent-input');  
+  const precentSums = precentInputs[0].value + precentInputs[1].value + precentInputs[2].value;
+
+  if (precentSums !== 100)
+    console.log("nau 100");
+  else 
+    atjauninatMakrovielas({'carb': precentInputs[0].value, 'fat': precentInputs[1].value, 'protein': precentInputs[2].value});
 }
 
 

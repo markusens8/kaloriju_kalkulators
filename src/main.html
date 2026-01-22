@@ -39,20 +39,25 @@
 
         <label>
           vecums
-          <input type='number' name='vecums' min='0' max='120' required/>
+          <input type='number' name='vecums' min='1' max='120' required/>
         </label>
 
         <label>
           garums
-          <input type='number' name='garums' min='0' max='300' required/>
+          <input type='number' name='garums' min='1' max='300' required/>
         </label>    
 
         <label>
           svars
-          <input type='number' name='svars' min='0' max='300' required/>
+          <input type='number' name='svars' min='1' max='300' required/>
         </label>
-        <input type='submit' value='iesniegt'></input>
+        <input type='submit' value='iesniegt'/>
       </form>
+      
+      <h2>sample data</h2>
+      <p>vecums: 55</p>
+      <p>garums: 168</p>
+      <p>svars: 59</p>
     </template>
 
     <template id='rezultats'>
@@ -75,6 +80,15 @@
           <td id='carb'></td>
           <td id='fat'></td>
           <td id='protein'></td>
+        </tr>
+        <tr>
+          <td></td>
+          <form onsubmit="parbauditProcentus(); return false;">
+            <td><input type='number' min='1' class='precent-input' value='33' /></td>
+            <td><input type='number' min='1' class='precent-input' value='33' /></td>
+            <td><input type='number' min='1' class='precent-input' value='34' /></td>
+            <input type='submit' value='iesniegt'/>
+          </form>
         </tr>
       </table>
 
