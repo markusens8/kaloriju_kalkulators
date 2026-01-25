@@ -62,35 +62,35 @@
 
     <template id='rezultats'>
       <h2>Bazes kalorijas:</h2>
-      <p class='kalorijas' id='bazes-kalorijas'></p>
+      <p id='bazes-kalorijas'></p>
 
       <h2>Mērķa kalorijas:</h2>
-      <p class='kalorijas' id='merka-kalorijas'></p>
+      <p id='merka-kalorijas'></p>
 
       <h2>Maltite</h2>
-      <table>
-        <tr>
-          <th>kcal</th>
-          <th>oglhidrati</th>
-          <th>tauki</th>
-          <th>olbaltumvielas</th>
-        </tr>
-        <tr>
-          <td id='kcal'></td>
-          <td id='carb'></td>
-          <td id='fat'></td>
-          <td id='protein'></td>
-        </tr>
-        <tr>
-          <td></td>
-          <form onsubmit="parbauditProcentus(); return false;">
-            <td><input type='number' min='1' class='precent-input' value='33' /></td>
-            <td><input type='number' min='1' class='precent-input' value='33' /></td>
-            <td><input type='number' min='1' class='precent-input' value='34' /></td>
+      <form onsubmit="atjauninatMakrovielas(); return false;">
+        <table>
+          <tr>
+            <th>kcal</th>
+            <th>oglhidrati</th>
+            <th>tauki</th>
+            <th>olbaltumvielas</th>
+          </tr>
+          <tr>
+            <td id='kcal'></td>
+            <td id='carb'></td>
+            <td id='fat'></td>
+            <td id='protein'></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
+            <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
+            <td><input type='number' min='1' class='precent-inputs' value='34' /></td>
             <input type='submit' value='iesniegt'/>
-          </form>
-        </tr>
-      </table>
+          </tr>
+        </table>
+      </form>
 
       <button onclick="ieladetSadalu('ievade')">atpakal</button>
     </template>

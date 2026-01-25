@@ -1,8 +1,19 @@
 body {
-  background-color: rgb(55, 168, 55);
-  color: rgb(10, 99, 10);
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 label {
   display: block;
+}
+
+#app {
+  background-color: rgb(55, 168, 55);
+  color: rgb(10, 99, 10);
+  border: solid black;
+  width: 50%;
 }
