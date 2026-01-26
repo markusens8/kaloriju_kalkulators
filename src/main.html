@@ -18,63 +18,76 @@
   
       <form id="dati" onsubmit="paraditRezultatus(); return false;">
         <label>
-          dzimums
-          <input type='radio' name='dzimums' value='sieviete' required/>
-          <input type='radio' name='dzimums' value='virietis'/>
+          Dzimums
+          <div class='radio-row'>
+            <input id='sieviete' type='radio' name='dzimums' value='sieviete' required/>
+            <label for='sieviete'>Sieviete</label>
+            <input id='virietis' type='radio' name='dzimums' value='virietis'/>
+            <label for='virietis'>Virietis</label>
+          </div>
         </label>
 
         <label>
-          aktivitātes līmenis
-          <input type='radio' name='aktivitates-limenis' value='mazs' required/>
-          <input type='radio' name='aktivitates-limenis' value='videjs'/>
-          <input type='radio' name='aktivitates-limenis' value='liels'/>
+          Aktivitates limenis
+          <div class='radio-row'>
+            <input id='mazs' type='radio' name='aktivitates-limenis' value='mazs' required/>
+            <label for='mazs'>Mazs</label>
+            <input id='videjs' type='radio' name='aktivitates-limenis' value='videjs'/>
+            <label for='videjs'>Videjs</label>
+            <input id='liels' type='radio' name='aktivitates-limenis' value='liels'/>
+            <label for='liels'>Liels</label>
+          </div>
         </label>
 
         <label>
-          dietas merki
-          <input type='radio' name='dietas-merki' value='zaudet' required/>
-          <input type='radio' name='dietas-merki' value='saglabat'/>
-          <input type='radio' name='dietas-merki' value='iegut'/>
+          Dietas merki
+          <div class='radio-row'>
+            <input id='zaudet' type='radio' name='dietas-merki' value='zaudet' required/>
+            <label for='zaudet'>Zaudet</label>
+            <input id='saglabat' type='radio' name='dietas-merki' value='saglabat'/>
+            <label for='saglabat'>Saglabat</label>
+            <input id='iegut' type='radio' name='dietas-merki' value='iegut'/>
+            <label for='iegut'>Iegut</label>
+          </div>
         </label>
 
         <label>
-          vecums
+          Vecums
           <input type='number' name='vecums' min='1' max='120' required/>
         </label>
 
         <label>
-          garums
+          Garums
           <input type='number' name='garums' min='1' max='300' required/>
         </label>    
 
         <label>
-          svars
+          Svars
           <input type='number' name='svars' min='1' max='300' required/>
         </label>
-        <input type='submit' value='iesniegt'/>
+        <input type='submit' value='Iesniegt' hidden/>
       </form>
-      
-      <h2>sample data</h2>
-      <p>vecums: 55</p>
-      <p>garums: 168</p>
-      <p>svars: 59</p>
     </template>
 
     <template id='rezultats'>
+      <header>
+        <h1>Kalorijas</h1>
+      </header>
+
       <h2>Bazes kalorijas:</h2>
       <p id='bazes-kalorijas'></p>
 
-      <h2>Mērķa kalorijas:</h2>
+      <h2>Merka kalorijas:</h2>
       <p id='merka-kalorijas'></p>
 
       <h2>Maltite</h2>
       <form onsubmit="atjauninatMakrovielas(); return false;">
         <table>
           <tr>
-            <th>kcal</th>
-            <th>oglhidrati</th>
-            <th>tauki</th>
-            <th>olbaltumvielas</th>
+            <th>Kcal</th>
+            <th>Oglhidrati</th>
+            <th>Tauki</th>
+            <th>Olbaltumvielas</th>
           </tr>
           <tr>
             <td id='kcal'></td>
@@ -87,12 +100,12 @@
             <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
             <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
             <td><input type='number' min='1' class='precent-inputs' value='34' /></td>
-            <input type='submit' value='iesniegt'/>
+            <input type='submit' value='iesniegt' hidden/>
           </tr>
         </table>
       </form>
 
-      <button onclick="ieladetSadalu('ievade')">atpakal</button>
+      <button onclick="ieladetSadalu('ievade')">Atpakal</button>
     </template>
   </body>
 </html>
