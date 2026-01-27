@@ -11,6 +11,7 @@
 
     <main id='app'></main>
 
+    <!-- ievades sadala -->
     <template id='ievade'>
       <header>
         <h1>Personas Dati</h1>
@@ -21,9 +22,9 @@
           Dzimums
           <div class='radio-row'>
             <input id='sieviete' type='radio' name='dzimums' value='sieviete' required/>
-            <label for='sieviete'>Sieviete</label>
+            <label for='sieviete'><img src='./assets/female.png'></label>
             <input id='virietis' type='radio' name='dzimums' value='virietis'/>
-            <label for='virietis'>Virietis</label>
+            <label for='virietis'><img src='./assets/male.png'></label>
           </div>
         </label>
 
@@ -69,41 +70,65 @@
       </form>
     </template>
 
+
+    <!-- rezultatu sadala -->
     <template id='rezultats'>
       <header>
         <h1>Kalorijas</h1>
       </header>
 
-      <h2>Bazes kalorijas:</h2>
-      <p id='bazes-kalorijas'></p>
+      <div id='rezultatu-konteineris'>
+        <div id='kaloriju-sadala'>
+          <h2>Bazes kalorijas:</h2>
+          <p id='bazes-kalorijas'></p>
 
-      <h2>Merka kalorijas:</h2>
-      <p id='merka-kalorijas'></p>
+          <h2>Merka kalorijas:</h2>
+          <p id='merka-kalorijas'></p>
+        </div>
 
-      <h2>Maltite</h2>
-      <form onsubmit="atjauninatMakrovielas(); return false;">
-        <table>
-          <tr>
-            <th>Kcal</th>
-            <th>Oglhidrati</th>
-            <th>Tauki</th>
-            <th>Olbaltumvielas</th>
-          </tr>
-          <tr>
-            <td id='kcal'></td>
-            <td id='carb'></td>
-            <td id='fat'></td>
-            <td id='protein'></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
-            <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
-            <td><input type='number' min='1' class='precent-inputs' value='34' /></td>
-            <input type='submit' value='iesniegt' hidden/>
-          </tr>
-        </table>
-      </form>
+
+        <div id='tabulu-sadala'>
+          <h2>Maltite</h2>
+          <form onsubmit="atjauninatMakrovielas(); return false;">
+            <table>
+              <tr>
+                <th>Kcal</th>
+                <th>Oglhidrati</th>
+                <th>Tauki</th>
+                <th>Olbaltumvielas</th>
+              </tr>
+              <tr>
+                <td id='kcal'></td>
+                <td id='carb'></td>
+                <td id='fat'></td>
+                <td id='protein'></td>
+              </tr>
+              <tr>
+                <td>Ievadi procentus:</td>
+                <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
+                <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
+                <td><input type='number' min='1' class='precent-inputs' value='34' /></td>
+                <input type='submit' value='iesniegt' hidden/>
+              </tr>
+            </table>
+          </form>
+
+
+          <h2>Dienai</h2>
+          <table>
+            <tr>
+              <th>Oglhidrati</th>
+              <th>Tauki</th>
+              <th>Olbaltumvielas</th>
+            </tr>
+            <tr>
+              <td id='carb-dienai'></td> 
+              <td id='fat-dienai'></td> 
+              <td id='protein-dienai'></td> 
+            </tr>
+          </table>
+        </div>
+      </div>
 
       <button onclick="ieladetSadalu('ievade')">Atpakal</button>
     </template>

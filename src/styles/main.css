@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Comfortaa:wght@300..700&family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@font-face {
+  font-family: bokutoh;
+  src: url('FOT-RodinBokutoh Pro EB.otf');
+}
+
 :root {
-  --primary: rgb(55, 168, 55); 
+  --primary: #63A960; 
   --secondary: green; 
-  --tertiary:
+  --tertiary: #74c270;
 }
 
 body {
-  font-family: 'Fredoka';
+  font-family: Fredoka;
   padding: 0;
   display: grid;
   place-items: center;
@@ -36,13 +41,13 @@ label {
   text-align: center;
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
-  width: 33%;
+  font-size: 2.5rem;
+  width: 28%;
   margin: 1.4rem auto;
 }
 
 input {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 input[type=radio] {
@@ -54,11 +59,32 @@ input[type=radio] + label {
 }
 
 input[type=radio]:checked + label {
+  color: #F7CD67;
   font-weight: bold;
 }
 
-input[type=number] {
+input[type=radio]:checked + label img {
+  outline: dashed #F7CD67; 
+  border-radius: 1rem;
+}
 
+input[type=radio]:hover + label {
+  cursor: pointer;
+}
+
+label input[type=number] {
+  font-family: bokutoh;   
+  font-size: 1rem;
+  -moz-appearance: textfield;
+  border-radius: 0.5rem;
+  color: var(--secondary);
+  background-color: var(--tertiary);
+  border: solid var(--secondary) 0.5rem;
+  text-align: center;
+}
+
+input[type=number]:focus {
+  outline: solid #F7CD67; 
 }
 
 .radio-row {
@@ -77,12 +103,49 @@ form {
   flex-wrap: wrap;
 }
 
+img {
+  width: 100px;
+  height: 100px;
+}
+
 #app {
   background-color: var(--primary);
   color: var(--secondary);
   padding: 1.5rem;
   border: solid var(--secondary) 1rem;
   border-radius: 1rem;
-  width: 50%;
-  height: 45%;
+  width: 55%;
+  height: 50%;
+}
+
+h2 {
+  font-size: 2.5rem;  
+}
+
+#rezultatu-konteineris {
+  display: flex;
+}
+
+#kaloriju-sadala, #tabulu-sadala {
+}
+
+#kaloriju-sadala {
+  width: 40%;
+}
+
+#tabulu-sadala {
+  width: 60%;
+}
+
+p {
+  font-size: 2rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+  font-size: 1.5rem;
+}
+
+th, td {
+  padding: 0.5rem 0.5rem;
 }

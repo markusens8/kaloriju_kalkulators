@@ -41,18 +41,21 @@ function atjauninatMakrovielas() {
     precents[i] = precentInputs[i].value / 100; 
     precentSum += precents[i];
   }
-  console.log(precents);
-  console.log(precentSum);
 
   if (precentSum !== 1) {
-    console.log("procenti nau 100");
+    alert("procentu summai jābūt vienādai ar 100");
     return; 
   }
 
+  const totalCalories = document.getElementById('merka-kalorijas').innerHTML;
   const mealCalories = parseInt(document.getElementById('merka-kalorijas').innerHTML / 3);
   document.getElementById('carb').innerHTML = parseInt(mealCalories * precents[0] / 4);
   document.getElementById('fat').innerHTML = parseInt(mealCalories * precents[1] / 9);
   document.getElementById('protein').innerHTML = parseInt(mealCalories * precents[2] / 4);
+
+  document.getElementById('carb-dienai').innerHTML = parseInt(totalCalories * precents[0] / 4);
+  document.getElementById('fat-dienai').innerHTML = parseInt(totalCalories * precents[1] / 9);
+  document.getElementById('protein-dienai').innerHTML = parseInt(totalCalories * precents[2] / 4);
 }
 
 
