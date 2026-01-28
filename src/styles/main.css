@@ -9,6 +9,7 @@
   --primary: #63A960; 
   --secondary: green; 
   --tertiary: #74c270;
+  --quaternary: #096109;
 }
 
 body {
@@ -72,7 +73,8 @@ input[type=radio]:hover + label {
   cursor: pointer;
 }
 
-label input[type=number] {
+
+input[type=number] {
   font-family: bokutoh;   
   font-size: 1rem;
   -moz-appearance: textfield;
@@ -81,6 +83,15 @@ label input[type=number] {
   background-color: var(--tertiary);
   border: solid var(--secondary) 0.5rem;
   text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+td input[type=number] {
+  width: 50%;
+  border: none;
 }
 
 input[type=number]:focus {
@@ -112,10 +123,11 @@ img {
   background-color: var(--primary);
   color: var(--secondary);
   padding: 1.5rem;
+  padding-bottom: 0;
   border: solid var(--secondary) 1rem;
   border-radius: 1rem;
   width: 55%;
-  height: 50%;
+  min-height: 52vh;
 }
 
 h2 {
@@ -124,13 +136,13 @@ h2 {
 
 #rezultatu-konteineris {
   display: flex;
+  justify-content: space-around;
+  margin: 0;
 }
 
-#kaloriju-sadala, #tabulu-sadala {
-}
 
 #kaloriju-sadala {
-  width: 40%;
+  width: 30%;
 }
 
 #tabulu-sadala {
@@ -141,11 +153,35 @@ p {
   font-size: 2rem;
 }
 
-table, th, td {
-  border: 1px solid black;
-  font-size: 1.5rem;
+table {
+  border-collapse: collapse;
+  border: 0.23rem solid var(--secondary);
 }
 
 th, td {
-  padding: 0.5rem 0.5rem;
+  border: 0.23rem solid var(--secondary);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+input[type=submit] {
+  font-size: 5rem;
+  color: var(--secondary);
+  background-color: var(--primary);
+  border: none;
+  margin-top: 0;
+}
+
+button {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--quaternary);
+  background-color: var(--primary);
+  border: none;
+  margin-top: 4rem;
+  cursor: pointer;
+}
+
+h1 {
+  color: var(--quaternary);
 }

@@ -54,19 +54,19 @@
 
         <label>
           Vecums
-          <input type='number' name='vecums' min='1' max='120' required/>
+          <input type='number' name='vecums' min='1' max='125' required/>
         </label>
 
         <label>
           Garums
-          <input type='number' name='garums' min='1' max='300' required/>
+          <input type='number' name='garums' min='50' max='280' required/>
         </label>    
 
         <label>
           Svars
-          <input type='number' name='svars' min='1' max='300' required/>
+          <input type='number' name='svars' min='1' max='700' required/>
         </label>
-        <input type='submit' value='Iesniegt' hidden/>
+        <input type='submit' hidden/>
       </form>
     </template>
 
@@ -84,11 +84,13 @@
 
           <h2>Merka kalorijas:</h2>
           <p id='merka-kalorijas'></p>
+
+          <button onclick="ieladetSadalu('ievade')"><</button>
         </div>
 
 
         <div id='tabulu-sadala'>
-          <h2>Maltite</h2>
+          <h2>Maltite (3x diena)</h2>
           <form onsubmit="atjauninatMakrovielas(); return false;">
             <table>
               <tr>
@@ -105,9 +107,9 @@
               </tr>
               <tr>
                 <td>Ievadi procentus:</td>
-                <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
-                <td><input type='number' min='1' class='precent-inputs' value='33' /></td>
-                <td><input type='number' min='1' class='precent-inputs' value='34' /></td>
+                <td><input type='number' min='0' class='precent-inputs' value='33' /></td>
+                <td><input type='number' min='0' class='precent-inputs' value='33' /></td>
+                <td><input type='number' min='0' class='precent-inputs' value='34' /></td>
                 <input type='submit' value='iesniegt' hidden/>
               </tr>
             </table>
@@ -130,7 +132,6 @@
         </div>
       </div>
 
-      <button onclick="ieladetSadalu('ievade')">Atpakal</button>
     </template>
   </body>
 </html>
